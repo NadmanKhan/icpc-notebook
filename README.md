@@ -1,1 +1,1 @@
-# Competitive Programming Snippets
+# Competitive Programming Snippets - NSU_Team1
