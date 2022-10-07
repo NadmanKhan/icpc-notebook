@@ -12,13 +12,13 @@ public:
 	LCA(int _n)
 	{
 		this->n = _n;
-		lg = log2(n) + 2;
+		lg = (int)log2(n) + 2;
 		depth.resize(n + 5, 0);
 		up.resize(n + 5, std::vector<int>(lg, 0));
 		g.resize(n + 1);
 	}
 
-	LCA(std::vector<std::vector<int>> &graph) : LCA(graph.size())
+	LCA(std::vector<std::vector<int>> &graph) : LCA((int)graph.size())
 	{
 		for (int i = 0; i < (int)graph.size(); i++)
 			g[i] = graph[i];

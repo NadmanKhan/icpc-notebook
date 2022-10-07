@@ -15,9 +15,9 @@ public:
 
 	PrimeSieve() {}
 	
-	PrimeSieve(int n)
+	PrimeSieve(int _n)
 	{
-		this->n = n, isprime.resize(n + 5, true), primes.clear();
+		this->n = _n, isprime.resize(_n + 5, true), primes.clear();
 		sieve();
 	}
 
@@ -73,7 +73,7 @@ public:
 			}
 		}
 
-		for (int i = l; i <= r; i++)
+		for (ll i = l; i <= r; i++)
 		{
 			if (i < 2)
 				continue;

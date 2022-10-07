@@ -7,20 +7,19 @@ class DSU
 
 public:
 	DSU() {}
-
-	//0 based
-	DSU(int mx_size)
+	// Max size
+	DSU(int dsz) 
 	{
 		//Default empty
-		p.resize(mx_size, 0), csz.resize(mx_size, 0);
+		p.resize(dsz + 5, 0), csz.resize(dsz + 5, 0);
 
-		init(mx_size);
+		init(dsz);
 	}
 
 	void init(int n)
 	{
 		// n = size
-		for (int i = 0; i < n; i++)
+		for (int i = 0; i <= n; i++)
 		{
 			p[i] = i, csz[i] = 1;
 		}
