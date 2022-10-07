@@ -4,8 +4,6 @@ using namespace std;
 
 typedef long long ll;
 
-const int N = 1e6, MOD = 998244353;
-
 struct Combinatrics
 {
 	vector<ll> fact, fact_inv, inv;
@@ -13,10 +11,10 @@ struct Combinatrics
 
 	Combinatrics() {}
 
-	Combinatrics(ll n, ll mod)
+	Combinatrics(ll n, ll _mod)
 	{
 		this->nl = n;
-		this->mod = mod;
+		this->mod = _mod;
 		fact.resize(n + 1, 1), fact_inv.resize(n + 1, 1), inv.resize(n + 1, 1);
 		init();
 	}
@@ -42,8 +40,7 @@ struct Combinatrics
 
 	ll ncr(ll n, ll r)
 	{
-		if (n < r)
-		{
+		if(n < r){
 			return 0;
 		}
 
@@ -54,8 +51,7 @@ struct Combinatrics
 
 	ll npr(ll n, ll r)
 	{
-		if (n < r)
-		{
+		if(n < r){
 			return 0;
 		}
 
@@ -96,3 +92,7 @@ struct Combinatrics
 		return (fact[n] * mod_inv(fact[n - r], p)) % p;
 	}
 };
+
+const int N = 1e6, MOD = 998244353;
+
+Combinatrics comb(N, MOD);
