@@ -20,5 +20,5 @@ Exampe:
 
 ```plaintext
 codes2pdf ./ /tmp/team_reference.pdf
-codes2pdf ./ --author "NSU\_ACDodgers" --initials "NSU"
+codes2pdf ./src --author "NSU\_NoAC" --initials "NSU"
 ```

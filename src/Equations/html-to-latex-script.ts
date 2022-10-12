@@ -44,11 +44,8 @@ let content = '';
 
 const checkAndWriteFile = () => {
     if (!content) return;
-
     const path = `${__dirname}/${filename}.tex`;
-
     fs.writeFileSync(path, content);
-
     filename = '';
     content = '';
 }
@@ -63,14 +60,6 @@ $('#equations-list').children().each(
             checkAndWriteFile();
             if (el.tagName === 'h3') {
                 filename = $(el).text();
-                // content = '\\makeatletter\n\\newcommand\\subsubsubsection' +
-                //     '{\\@startsection{paragraph}{4}{\\z@}\%\n' +
-                //     '{-2.5ex\\@plus -1ex \\@minus -.25ex}\%\n' +
-                //     '{1.25ex \\@plus .25ex}\%\n' +
-                //     '{\\normalfont\\normalsize\\bfseries}}\n' +
-                //     '\makeatother\n' +
-                //     '\\setcounter{secnumdepth}{3}\n' +
-                //     '\\setcounter{tocdepth}{4}\n';
             }
         }
     }
