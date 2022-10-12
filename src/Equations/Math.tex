@@ -1,0 +1,235 @@
+\begin{enumerate}
+
+            \end{enumerate}
+\paragraph{General}\begin{enumerate}
+
+            \item $\displaystyle ab \mod\ ac=a(b \mod\ c)$
+            \item $\displaystyle \sum_{i = 0}^n{i\cdot i!=(n + 1)! - 1}$.
+            \item $\displaystyle a^k - b^k = (a - b) \cdot (a^{k - 1}b^0 + a^{k - 2}b^1 + … + a^0b^{k - 1})$
+            \item $\displaystyle \min(a + b, c) = a + \min(b, c - a)$
+            \item $|a - b| + |b - c| + |c - a| = 2 (\max (a, b, c) - \min (a, b, c))$
+            \item $\displaystyle a \cdot b \leq c \rightarrow a \leq \left \lfloor \dfrac{c}{b} \right \rfloor$ is correct
+            
+            \item $\displaystyle a \cdot b < c \rightarrow a < \left \lfloor \dfrac{c}{b} \right \rfloor$ is
+                incorrect
+            
+            \item $\displaystyle a \cdot b \geq c \rightarrow a \geq \left \lfloor \dfrac{c}{b} \right \rfloor$ is correct
+            
+            \item $\displaystyle a \cdot b > c \rightarrow a > \left \lfloor \dfrac{c}{b} \right \rfloor$ is correct
+            
+            \item 
+                For positive integer $n$, and arbitrary real numbers $m,x$,
+
+                $\displaystyle \left \lfloor \dfrac{\left \lfloor x/m \right \rfloor}{n} \right \rfloor = \left
+                    \lfloor
+                    \dfrac{x}{mn} \right \rfloor$
+
+                $\displaystyle \left \lceil \dfrac{\left \lceil x/m \right \rceil}{n} \right \rceil = \left \lceil
+                    \dfrac{x}{mn} \right \rceil$
+
+            
+            \item 
+                Lagrange’s identity:
+
+                \[\displaystyle \displaystyle {\displaystyle {\begin{aligned}\left(\sum
+                \limits_{k=1}^{n}a_{k}^{2}\right)\left(\sum
+                \limits_{k=1}^{n}b_{k}^{2}\right)-\left(\sum\limits_{k=1}^{n}a_{k}b_{k}\right)^{2}&=\sum
+                \limits_{i=1}^{n-1}\sum \limits_{j=i+1}^{n}\left(a_{i}b_{j}-a_{j}b_{i}\right)^{2}\\&={\frac
+                {1}{2}}\sum
+                \limits_{i=1}^{n}\sum \limits_{j=1,j\neq i}^{n}(a_{i}b_{j}-a_{j}b_{i})^{2}\end{aligned}}}\]
+            
+            \item $\displaystyle \sum_{i = 1}^n{ia^i} = \frac{a(n a^{n + 1} - (n + 1) a^n + 1)}{(a - 1)^2}$
+            \item 
+                Vieta’s formulas:
+                    Any general polynomial of degree $n$
+
+                \[\displaystyle p(x) = a_nx^n + a_{n - 1}x^{n - 1} + ... + a_1x + a_0\]
+                (with the coefficients being real or complex numbers and $\displaystyle a_n \neq 0$) is known by the
+                    fundamental theorem of algebra to have $n$ (not necessarily distinct) complex roots $r_1, r_2,…,
+                    r_n$.
+                
+
+                \[\begin{cases}
+                \text{$r_1 + r_2 + ... + r_{n - 1} + r_n = - \frac{a_{n - 1}}{a_n}$}
+                \\
+                \text{$\displaystyle (r_1r_2 + r_1r_3 + ... + r_1r_n) + (r_2r_3 + r_2r_4 + ... + r_2r_n) + ... + r_{n -
+                1}r_n =
+                \frac{a_{n - 2}}{a_n}$}
+                \\\vdots\\
+                \text{$r_1r_2...r_n = (-1)^n\frac{a_0}{a_n}.$}
+                \end{cases}\]
+                Vieta’s formulas can equivalently be written as
+
+                \[\displaystyle \sum_{1 \leq i_1 < i_2 < ...<i_k \leq n} \Bigg(\prod_{j = 1}^k{r_{i_j}}\Bigg) =
+                (-1)^k\frac{a_{n - k}}{a_n},\]
+            
+            \item 
+                We are given n numbers $\displaystyle a_1,a_2,…,a_n$ and our task is to find a value $\displaystyle
+                    x$
+                    that
+                    minimizes the sum,
+
+                \[|a_1 - x| + |a_2 - x| + ... + |a_n - x|\]
+                optimal $\displaystyle x=$ median of the array.
+                    if $n$ is even $\displaystyle x =$ $[$left median,right median$]$ i.e. every number in this range
+                    will
+                    work.
+                
+
+                For minimizing
+
+                \[\displaystyle (a_1 - x)^2 + (a_2 - x)^2 + ... + (a_n - x)^2\]
+                optimal $\displaystyle x = \dfrac{(a_1 + a_2 + … + a_n)}{ n}$
+
+            
+            \item Given an array a of n non-negative integers. The task is to find the sum of the product of elements of
+                all
+                the
+                possible subsets. It is equal to the product of $\displaystyle (a_i + 1)$ for all $\displaystyle a_i$
+            
+            \item 
+                Pentagonal number theorem:
+                    In mathematics, the pentagonal number theorem states that
+
+                \[\displaystyle \prod_{n = 1}^{\infty}\left ( 1 - x^n \right ) = \prod_{k = -\infty}^{\infty} \left ( -1
+                \right
+                )^kx^{\frac{k(3k - 1)}{2}} = 1 + \prod_{k = 1}^{\infty}\left (-1\right )^k\left ( x^{\frac{k(3k +
+                1)}{2}} +
+                x^{\frac{k(3k - 1)}{2}}\right ).\]
+                In other words,
+
+                \[\displaystyle (1 - x)(1 - x ^ 2)(1 - x^3)\cdots =1 - x - x^2 + x^5 + x^7 - x^{12} - x^{15} + x^{22} +
+                x^{26} -
+                \cdots.\]
+                The exponents $\displaystyle 1, 2, 5, 7, 12,\cdots$ on the right hand side are given by the formula
+                    $g_k
+                    =
+                    \frac{k(3k - 1)}{2}$ for $\displaystyle \displaystyle k = 1, -1, 2, -2, 3, \cdots$ and are called
+                    (generalized) pentagonal numbers.
+
+                It is useful to find the partition
+                        number in $O(n \sqrt{n})$
+
+                \end{enumerate}
+\paragraph{Fibonacci Number}\begin{enumerate}
+
+            
+            \item $\displaystyle F_0=0, F_1=1$ and $\displaystyle F_n=F_{n-1}+F_{n-2}$
+            \item $\displaystyle F_n=\sum\limits_{k=0}^{\lfloor\frac{n-1}{2}\rfloor}\binom{n-k-1}{k}$
+            \item $\displaystyle
+                F_n=\frac{1}{\sqrt{5}}(\frac{1+\sqrt{5}}{2})^n-\frac{1}{\sqrt{5}}(\frac{1-\sqrt{5}}{2})^n$
+            
+            \item $\displaystyle \sum\limits_{i=1}^{n}F_i=F_{n+2}-1$
+            \item $\displaystyle \sum\limits_{i=0}^{n-1}F_{2i+1}=F_{2n}$
+            \item $\displaystyle \sum\limits_{i=1}^{n}F_{2i}=F_{2n+1}-1$
+            \item $\displaystyle \sum\limits_{i=1}^{n}F_{i}^{2}=F_nF_{n+1}$
+            \item $\displaystyle F_mF_{n+1}-F_{m-1}F_{n}=(-1)^nF_{m-n}$
+                $\displaystyle F_{2n}=F_{n+1}^2-F_{n-1}^2=F_n(F_{n+1}+F_{n-1})$
+            \item $\displaystyle F_mF_n+F_{m-1}F_{n-1}=F_{m+n-1}$
+                $\displaystyle F_mF_{n+1}+F_{m-1}F_{n}=F_{m+n}$
+            \item A number is Fibonacci if and only if one or both of $\displaystyle (5 \cdot n^2 + 4)$ or $\displaystyle
+                (5
+                \cdot
+                n^2 - 4)$ is a perfect square
+            \item Every third number of the sequence is even and more generally, every $\displaystyle \displaystyle
+                k^{th}$
+                number
+                of the sequence is a multiple of $\displaystyle F_k$
+            \item $gcd(F_m, F_n)=F_{gcd(m, n)}$
+            \item Any three consecutive Fibonacci numbers are pairwise coprime, which means that, for every n, $gcd(F_n,
+                F_{n+1})=gcd(F_n, F_{n+2}), gcd(F_{n+1}, F_{n+2})=1$
+            \item 
+                If the members of the Fibonacci sequence are taken $mod$ $n$, the resulting sequence is periodic with
+                    period
+                    at most $6n$.
+
+                \end{enumerate}
+\paragraph{Pythagorean Triples}\begin{enumerate}
+
+            
+            \item A Pythagorean triple consists of three positive integers $\displaystyle a, b,$ and $\displaystyle C$,
+                such
+                that
+                $\displaystyle a^{2}+b^{2}=c^{2}$. Such a triple is commonly written $\displaystyle (a, b, c)$
+            \item 
+                Euclid’s formula is a fundamental formula for generating Pythagorean triples given an arbitrary pair
+                    of
+                    integers m and n with $m >n >0$. The formula states that the integers
+
+                \[\displaystyle a = m^{2}-n^{2}, b = 2mn, c = m^{2}+n^{2}\]
+                form a Pythagorean triple. The triple generated by Euclid’s formula is primitive if and only if m and
+                    n
+                    are
+                    coprime and not both odd. When both m and n are odd, then a, b, and c will be even, and the triple
+                    will
+                    not
+                    be primitive; however, dividing a, b, and c by 2 will yield a primitive triple when m and n are
+                    coprime
+                    and
+                    both odd.
+
+            
+            \item 
+                The following will generate all Pythagorean triples uniquely:
+
+                \[\displaystyle a = k\cdot \left( m^{2}-n^{2}\right), b = k\cdot\left(2mn\right), c = k\cdot
+                \left(m^{2}+n^{2}\right)\]
+                where m, n, and k are positive integers with $m > n$, and with m and n coprime and not both odd.
+                
+
+            
+            \item 
+                Theorem:
+                    The number of Pythagorean triples
+                    {a,b,n} with $max{a,b,n} = n$ is given by
+
+                \[\displaystyle \dfrac{1}{2}\left( \displaystyle\prod _{ p^{\alpha} || n}\left( 2\alpha +1\right)
+                -1\right)\]
+                where the product is over all prime divisors p of the form $4k+1$.
+                    The notation $\displaystyle p^{\alpha} || n$ stands for the highest exponent $\displaystyle \alpha$
+                    for
+                    which $\displaystyle p^{\alpha}$ divides $n$
+                    Example:
+                    For $n = 2\cdot3^{2}\cdot5^{3}\cdot7^{4}\cdot11^{5}\cdot13^{6},$ the number of Pythagorean triples
+                    with
+                    hypotenuse n is $\displaystyle \dfrac{1}{2}\left( 7.13-1\right) =45$.
+                    To obtain a formula for the number of Pythagorean triples with hypotenuse less than a specific
+                    positive
+                    integer N, we may add the numbers corresponding to each $n < N$ given by the Theorem. There is no
+                    simple
+                    way to compute this as a function of N.
+                
+
+                \end{enumerate}
+\paragraph{Sum of Squares Function}\begin{enumerate}
+
+            
+            \item The function is defined as
+                $r_{k}\left(n\right) = \left|{\left(a_{1},a_{2},…,a_{k} \right) \in \mathbf{Z^{k}} :
+                n=a_{1}^{2}+a_{2}^{2}+…+a_{k}^{2}}\right|$
+            \item The number of ways to write a natural number as sum of two squares is given by $r_2(n)$. It is given
+                explicitly
+                by
+                $r_{2}\left(n\right) = 4\left(d_{1}\left(n\right) - d_{3}\left(n\right)\right)$
+                where d1(n) is the number of divisors of n which are congruent with 1 modulo 4 and d3(n) is the number
+                of
+                divisors of n which are congruent with 3 modulo 4.  
+                The prime factorization $n = 2^{g}p_{1}^{f_{1}}p_{2}^{f_{2}}. . .q_{1}^{h_{1}}q_{2}^{h_{2}}. . . ,$
+                where
+                $\displaystyle p_{i}$ are the prime factors of the form $\displaystyle p_{i} \equiv 1$ (mod 4), and
+                $q_{i}$
+                are
+                the prime factors of the form $q_{i} \equiv 3$ (mod 4) gives another formula $r_{2}\left(n\right) =
+                4\left(f_{1}+1\right)\left(f_{2}+1\right)…,$ if all exponents $h_{1}$,$h_{2}$,… are even. If one or more
+                $h_{i}$
+                are odd, then $r_{2}\left(n\right) = 0.$
+            \item 
+                The number of ways to represent n as the sum of four squares is eight times the sum of all its
+                    divisors
+                    which
+                    are not divisible by 4, i.e.
+                    $r_{4}\left( n \right) = 8 \displaystyle\sum {d| n;4 \nmid d}d$ 
+                        $r{8}\left(n\right) = 16 \displaystyle\sum _{d|n} \left(-1\right)^{n+d}d^{3}$
+
+            
+        \end{enumerate}

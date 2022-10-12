@@ -1,0 +1,25 @@
+\begin{enumerate}
+	\item $\displaystyle \displaystyle a+b = a \oplus b +2(a \& b)$.\item $\displaystyle \displaystyle a + b = a \mid b + a \& b$\item $\displaystyle \displaystyle a \oplus b = a\mid b - a \& b$\item $\displaystyle \displaystyle k_{th}$ bit is set in $\displaystyle x$ iff $\displaystyle x \mod 2^{k -
+				      1}\geq
+		      2^k$. It comes handy when you need to look at the bits of the numbers which are pair sums or subset sums
+	      etc.
+	\item $\displaystyle \displaystyle k_{th}$ bit is set in $\displaystyle x$ iff $\displaystyle x \mod 2^{k - 1}
+		      - x
+		      \mod 2^k \neq\ 0$ ($ = 2^k$ to be exact). It comes handy when you need to look at the bits of the
+	      numbers
+	      which
+	      are pair sums or subset sums etc.\item $n \mod 2^i = n \& (2^i - 1)$\item $\displaystyle 1\oplus 2 \oplus 3 \oplus \cdots \oplus (4k - 1) = 0$ for any $\displaystyle
+		      \displaystyle k
+		      \ge
+		      0$\item
+	      Erdos Gallai Theorem:
+	      The degree sequence of an undirected graph is the non-increasing sequence of its vertex
+	      degrees
+	      A sequence of non-negative integers $d_1 \geq d_2 \geq \cdots \geq d_n$ can be represented as the
+	      degree
+	      sequence of finite simple graph on $n$ vertices if and only if $d_1 + d_2 + \cdots + d_n$ is even
+	      and
+
+	      \[\displaystyle \sum_{i = 1}^k {d_i \leq k(k - 1)} + \sum_{i = k + 1}^n \min(d_i, k)\]
+	      holds for every $\displaystyle \displaystyle k$ in $\displaystyle 1 \leq k \leq n$.
+\end{enumerate}

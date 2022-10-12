@@ -1,0 +1,339 @@
+\begin{enumerate}
+
+            \end{enumerate}
+\paragraph{General}\begin{enumerate}
+
+            \item for $i > j$, $\displaystyle \gcd(i, j)$ $ = $ $\displaystyle \gcd(i -j, j)$ $\displaystyle \leq (i
+                -j)$
+            
+            \item 
+                $\displaystyle \sum_{x = 1}^n \left[ d | x^k \right] = \left \lfloor\dfrac{n}{\prod_{i =
+                    0}{p_i^{\left
+                    \lceil
+                    \dfrac{e_i}{k}\right \rceil}}}\right \rfloor$,
+
+                where $d = \prod_{i = 0}{p_i^{e_i}}$. Here, $[a | b]$ means if $\displaystyle a$ divides $b$ then it
+                    is
+                    $\displaystyle 1$, otherwise it is $0$.
+
+            
+            \item The number of lattice points on segment $\displaystyle (x_1,y_1)$ to $\displaystyle (x_2,y_2)$ is
+                $\displaystyle
+                \gcd(abs(x_1-x_2),abs(y_1-y_2)) + 1$
+            \item $\displaystyle (n-1)! \mod n = n -1$ if n is prime, 2 if $n = 4$, $0$ otherwise.
+            \item A number has odd number of divisors if it is perfect square
+            \item The sum of all divisors of a natural number n is odd if and only if $n=2^r\cdot k^2$ where $r$ is
+                non-negative
+                and $\displaystyle \displaystyle k$ is positive integer.
+            \item 
+                Let $\displaystyle a$ and $b$ be coprime positive integers, and find integers $\displaystyle
+                    a{\prime}$
+                    and
+                    $b{\prime}$ such that $\displaystyle aa{\prime} \equiv 1 \mod b$ and $bb{\prime} \equiv 1 \mod a$.
+                    Then
+                    the
+                    number of representations of a positive integers (n) as a non negative linear combination of
+                    $\displaystyle
+                    a$ and $b$ is
+
+                \[\displaystyle \frac{n}{ab}-\Big\{\frac{b{\prime} n}{a}\Big\}-\Big\{\frac{a{\prime} n}{b}\Big\} + 1\]
+                Here, $\displaystyle {x}$ denotes the fractional part of $\displaystyle x$.
+
+            
+            \item 
+                \[\displaystyle \displaystyle \sum \limits_{i=1}^{a}\sum \limits_{j=1}^{b}\sum \limits_{k=1}^{c} d(i
+                \cdot j
+                \cdot k) = \sum \limits_{\gcd (i,j)=\gcd (j,k) = \gcd (k,i) =1} \left \lfloor \dfrac{a}{i}\right \rfloor
+                \left
+                \lfloor \dfrac{b}{j}\right \rfloor \left \lfloor \dfrac{c}{k} \right \rfloor\]
+                Here, $d(x) =$ number of divisors of $\displaystyle x$.
+
+            
+            \item 
+                Gauss’s generalization of Wilson’s theorem:,
+                    Gauss proved that,
+
+                \[\displaystyle \displaystyle \prod \limits_{k=1 \atop \gcd(k,m)=1}^{m}\!\!k\ \equiv
+                {\begin{cases}-1{\pmod
+                {m}}&{\text{if }}m=4,\;p^{\alpha },\;2p^{\alpha }\\\;\;\,1{\pmod
+                {m}}&{\text{otherwise}}\end{cases}}\]
+                where $\displaystyle p$ represents an odd prime and $\displaystyle \alpha$ a positive integer. The
+                    values
+                    of
+                    $m$ for which the product is $-1$ are precisely the ones where there is a primitive root modulo $m$.
+                
+
+                \end{enumerate}
+\paragraph{Divisor Function}\begin{enumerate}
+
+            
+            \item $\displaystyle \sigma_x(n)=\sum\limits_{d\vert n}^{}d^x$
+            \item It is multiplicative i.e if $\displaystyle \gcd(a, b)=1\to \sigma_x(ab)=\sigma_x(a)\sigma_x(b)$.
+            \item 
+                \[\displaystyle \sigma_x(n)=\prod\limits_{i=1}^{\tau}\frac{p_i^{(a_i+1)x}-1}{p_i^x-1}\]
+            
+            \item \textbf{Divisor Summatory Function}
+                \begin{enumerate}
+
+                    \item Let $\displaystyle \sigma_0(k)$ be the number of divisors of $\displaystyle \displaystyle k$.
+                    
+                    \item $D(x)=\sum\limits_{n\leq{x}}{\sigma_0(n)}$
+                    \item $D(x)=\sum\limits_{k=1}^{x}\lfloor\frac{x}{k}\rfloor=2\sum\limits_{k=1}^{u}\lfloor\frac{x}{k}\rfloor-u^2$,
+                        where $u=\sqrt{x}$
+                    \item $D(n)=$Number of increasing arithmetic progressions where $n+1$ is the second or later term.
+                        (i.e.
+                        The
+                        last term, starting term can be any positive integer $\displaystyle \le n$. For example,
+                        $D(3)=5$
+                        and
+                        there are 5 such arithmetic progressions: $\displaystyle (1, 2, 3, 4); (2, 3, 4); (1, 4); (2,
+                        4);
+                        (3,
+                        4).$
+                \end{enumerate}
+
+            
+            \item Let $\displaystyle \sigma_1(k)$ be the sum of divisors of k. Then, $\displaystyle
+                \sum\limits_{k=1}^{n}\sigma_1(k)=\sum\limits_{k=1}^{n}{k \left\lfloor \frac{n}{k} \right\rfloor}$
+            \item $\displaystyle \prod\limits_{d\vert n}^{}d={n^{\frac{\sigma_0}{2}}}$ if $n$ is not a perfect square, and
+                $=\sqrt{n} \cdot n^{\frac{\sigma_0-1}{2}}$ if $n $ is a perfect square.
+                \end{enumerate}
+\paragraph{Euler’s Totient function}\begin{enumerate}
+
+            
+            \item The function is multiplicative.
+                This means that if $\displaystyle \gcd(m, n) = 1$, $\displaystyle \phi(m \cdot n) = \phi(m) \cdot
+                \phi(n)$.
+            
+            \item $\displaystyle \phi(n) = n\prod_{p |n}(1 - \frac{1}{p} )$
+            \item If p is prime and (k \geq 1), then,
+                $\displaystyle \phi(p^k) = p^{k - 1}(p - 1) = p^k(1 - \frac{1}{p})$
+            \item $J_k(n)$, the Jordan totient function, is the number of $\displaystyle \displaystyle k$-tuples of
+                positive
+                integers all less than or equal to n that form a coprime $\displaystyle (k + 1)$-tuple together with
+                $n$. It
+                is
+                a generalization of Euler’s totient, $\displaystyle \phi(n) = J_1(n)$. 
+                \(J_k(n) = n^k\prod_{p |n}(1 - \frac{1}{p^k})\)
+            \item $\displaystyle \sum_{d|n}J_k(d) = n^k$
+            \item $\displaystyle \sum_{d|n}\phi(d) = n$
+            \item $\displaystyle \phi(n) = \sum_{d|n}\mu(d)\cdot\frac{n}{d} = n\sum_{d|n}\frac{\mu(d)}{d}$
+            \item 
+                $\displaystyle \phi(n) = \sum_{d|n}d\cdot\mu(\frac{n}{d})$
+
+            
+            \item $\displaystyle \displaystyle {a}\vert{b} \to \varphi(a)\vert{\varphi(b)}$
+            \item $n\vert{\varphi(a^n - 1)}$ for $\displaystyle a, n > 1$
+            \item 
+                $\displaystyle \varphi(mn)=\varphi(m)\varphi(n)\cdot\frac{d}{\varphi(d)}$ where $d=gcd(m, n)$
+                    Note the special cases
+
+                \[\varphi(2m)=
+                \begin{cases}
+                2\varphi(m) & ; if \, m \, is \, even\\
+                \varphi(m) & ; if \, m \, is \, odd\\
+                \end{cases}\]
+                \[\displaystyle \varphi(n^m)=n^{m-1}\varphi(n)\]
+            
+            \item $\displaystyle \varphi(lcm(m, n)) \cdot \varphi(gcd(m, n))=\varphi(m) \cdot \varphi(n)$
+                Compare this to the formula $lcm(m, n)\cdot gcd(m,n)=m\cdot n$
+            \item $\displaystyle \varphi(n)$ is even for $n\geq3$. Moreover, if if $n$ has $r$ distinct odd prime factors,
+                $\displaystyle 2^r \vert \varphi(n)$
+            \item $\displaystyle \sum\limits_{d\vert{n}}^{} \frac{\mu^2(d)}{\varphi(d)}=\frac{n}{\varphi(n)}$
+            \item $\displaystyle \sum\limits_{1\leq k \leq n, \gcd(k, n)=1}k=\frac{1}{2}n\varphi(n)$ for $n > 1$
+            \item $\displaystyle \frac{\varphi(n)}{n}=\frac{\varphi(rad(n))}{rad(n)}$ where $rad(n)=$
+                $\displaystyle \prod\limits_{p\vert n, p \, prime} p$
+            \item $\displaystyle \phi(m) \geq \log_2{m}$
+            \item $\displaystyle \phi(\phi(m))\leq\frac{m}{2}$
+            \item 
+                When $\displaystyle x \geq \log_2m$, then
+
+                \[n^x\mod m=n^{\phi(m) + x\mod \phi(m)}\mod m\]
+            
+            \item $\displaystyle \sum\limits_{1\leq k\leq n, \gcd(k, n)=1}\gcd(k-1, n)=\varphi(n)d(n)$ where $d(n)$ is
+                number
+                of
+                divisors. Same equation for $\displaystyle \gcd(a \cdot k-1, n)$ where $\displaystyle a$ and $n$ are
+                coprime.
+            
+            \item For every $n$ there is at least one other integer $m\ne n$ such that $\displaystyle
+                \varphi(m)=\varphi(n).$
+            
+            \item $\displaystyle \sum\limits_{i=1}^{n} {\varphi(i) \cdot \lfloor\frac{n}{i}\rfloor=\frac{n*(n+1)}{2}}$
+            
+            \item $\displaystyle \sum\limits_{i=1, i \% 2 \ne 0 }^{n} \varphi(i) \cdot
+                \lfloor\frac{n}{i}\rfloor=\sum\limits_{k\geq 1}[\frac{n}{2^k}]^2$.
+                Note that $[\, ]$ is used here to denote round operator not floor or ceil
+            \item 
+                \[\displaystyle \sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}ij[\gcd(i,
+                j)=1]=\sum\limits_{i=1}^{n}\varphi(i)i^2\]
+            
+            \item Average of coprimes of $n$ which are less than $n$ is $\displaystyle \dfrac{n}{2}$.
+                \end{enumerate}
+\paragraph{Mobius Function and Inversion}\begin{enumerate}
+
+            
+            \item For any positive integer $n$, define $\displaystyle \mu(n)$ as the sum of the primitive $n^{th}$ roots
+                of
+                unity.
+                It has values in $\displaystyle {-1, 0, 1}$ depending on the factorization of $n$ into prime factors:
+                \begin{enumerate}
+
+                    \item $\displaystyle \mu(n)=1$ if $n$ is a square-free positive integer with an even number of prime
+                        factors.
+                    
+                    \item $\displaystyle \mu(n)=-1$ if $n$ is a square-free positive integer with an odd number of prime
+                        factors.
+                    
+                    \item $\displaystyle \mu(n)=0$ if $n$ has a squared prime factor.
+                \end{enumerate}
+
+            
+            \item It is a multiplicative function.
+            \item 
+                \[\sum_{d|n}\mu(d) =
+                \begin{cases}
+                1 & ; n=1\\
+                0 & ; n > 0
+                \end{cases}\]
+            
+            \item $\displaystyle \displaystyle \sum\limits_{n=1}^N {\mu}^2(n) = \displaystyle \sum\limits_{n=1}^{\sqrt{N}}
+                \mu(k)
+                \cdot \left \lfloor \dfrac{N}{k^2} \right\rfloor$
+                This is also the number of square-free numbers $\displaystyle \le n$
+            \item \textbf{Mobius inversion theorem:} The classic version states that if g and f are arithmetic
+                functions
+                satisfying
+                $g(n) = \displaystyle \sum_{d|n}f(d) $ for every integer $n \ge 1$ then $g(n) = \displaystyle
+                \sum_{d|n}\mu(d)g\left(\frac{n}{d}\right)$ for every integer $n \ge 1$
+            \item If $\displaystyle F(n) = \displaystyle \prod_{d|n} f(d)$, then $\displaystyle F(n) = \displaystyle
+                \prod_{d|n}
+                F\left(\frac{n}{d}\right)^{\mu(d)}$
+            \item $\displaystyle \displaystyle \sum_{d|n}\mu(d)\phi(d) = \displaystyle \prod_{j=1}^K (2 - P_j)$
+                where $\displaystyle p_j$ is the primes factorization of $d$
+            \item 
+                If $\displaystyle F(n)$ is multiplicative, $\displaystyle F \not\equiv 0$, then $\displaystyle
+                    \displaystyle
+                    \sum_{d|n} \mu(d) f(d) = \displaystyle \prod_{i=1} (1 - f(P_i)) \cdot$
+                    where $\displaystyle p_i$ are primes of $n$.
+
+                \end{enumerate}
+\paragraph{GCD and LCM}\begin{enumerate}
+
+            
+            \item $\displaystyle \gcd(a, 0) = a$
+            \item $\displaystyle \gcd(a, b) = \gcd(b, a \mod b)$
+            \item Every common divisor of $\displaystyle a$ and $b$ is a divisor of $\displaystyle \gcd(a,b)$.
+            \item if $m$ is any integer, then $\displaystyle \gcd(a + m {\cdot} b, b) = \gcd(a, b)$
+            \item The gcd is a multiplicative function in the following sense: if $\displaystyle a_1$ and $\displaystyle
+                a_2$
+                are
+                relatively prime, then $\displaystyle \gcd(a_1 \cdot a_2, b) = \gcd(a_1, b) \cdot \gcd(a_2,b )$.
+            \item $\displaystyle \gcd(a, b){\cdot} \operatorname{lcm}(a, b) = |a{\cdot}b|$
+            \item $\displaystyle \gcd(a, \operatorname{lcm}(b, c)) = \operatorname{lcm}(\gcd(a, b), \gcd(a, c))$.
+            \item $\displaystyle \operatorname{lcm}(a, \gcd(b, c)) = \gcd(\operatorname{lcm}(a, b), \operatorname{lcm}(a,
+                c))$.
+            
+            \item For non-negative integers $\displaystyle a$ and $b$, where $\displaystyle a$ and $b$ are not both zero,
+                $\displaystyle \gcd({n^a} - 1, {n^b} - 1) = n^{\gcd(a,b)} - 1$
+            \item $\displaystyle \gcd(a, b) = \displaystyle \sum_{k|a \, \text{and} \, k|b} {\phi(k)}$
+            \item $\displaystyle \displaystyle \sum_{i=1}^n [\gcd(i, n) = k] = { \phi{\left(\frac{n}{k}\right)}}$
+            \item $\displaystyle \displaystyle \sum_{k=1}^n \gcd(k, n) = \displaystyle \sum_{d|n} d \cdot
+                {\phi{\left(\frac{n}{d}\right)}}$
+            \item $\displaystyle \displaystyle \sum_{k=1}^n x^{\gcd(k,n)} = \displaystyle \sum_{d|n} x^d \cdot
+                {\phi{\left(\frac{n}{d}\right)}}$
+            \item $\displaystyle \displaystyle \sum_{k=1}^n \frac{1}{\gcd(k, n)} = \displaystyle \sum_{d|n} \frac{1}{d}
+                \cdot
+                {\phi{\left(\frac{n}{d}\right)}} = \frac{1}{n} \displaystyle \sum_{d|n} d \cdot \phi(d)$
+            \item $\displaystyle \displaystyle \sum_{k=1}^n \frac{k}{\gcd(k, n)} = \frac{n}{2} \cdot \displaystyle
+                \sum_{d|n}
+                \frac{1}{d} \cdot {\phi{\left(\frac{n}{d}\right)}} = \frac{n}{2} \cdot \frac{1}{n} \cdot \displaystyle
+                \sum_{d|n} d \cdot \phi(d)$
+            \item $\displaystyle \displaystyle \sum_{k=1}^n \frac{n}{\gcd(k, n)} = 2 * \displaystyle \sum_{k=1}^n
+                \frac{k}{\gcd(k,
+                n)} - 1$, for $n > 1$
+            \item $\displaystyle \displaystyle \sum_{i=1}^n \sum_{j=1}^n [\gcd(i, j) = 1] = \displaystyle \sum_{d=1}^n
+                \mu(d)
+                \lfloor {\frac{n}{d} \rfloor}^2$
+            \item $\displaystyle \displaystyle \sum_{i=1}^n \displaystyle\sum_{j=1}^n \gcd(i, j) = \displaystyle
+                \sum_{d=1}^n
+                \phi(d) \lfloor {\frac{n}{d} \rfloor}^2$
+            \item $\displaystyle \sum_{i=1}^n \sum_{j=1}^n i \cdot j[\gcd(i, j) = 1] = \sum_{i=1}^n \phi(i)i^2$
+            \item $\displaystyle F(n) = \displaystyle \sum_{i=1}^n \displaystyle \sum_{j=1}^n \operatorname{lcm}(i, j) =
+                \displaystyle \sum_{l=1}^n {\left(\frac{\left( 1 + \lfloor{\frac{n}{l} \rfloor} \right) \left(
+                \lfloor{\frac{n}{l} \rfloor} \right)} {2} \right)}^2 \displaystyle \sum_{d|l} \mu(d)ld$
+            \item $\displaystyle \gcd(\operatorname{lcm}(a, b), \operatorname{lcm}(b, c), \operatorname{lcm}(a, c)) =
+                \operatorname{lcm}(\gcd(a, b), \gcd(b, c), \gcd(a, c))$
+            \item $\displaystyle \gcd(A_L, A_{L+1}, …, A_R) = \gcd(A_L, A_{L+1} - A_L, …, A_R - A_{R-1})$.’
+            \item Given n, If $SUM = LCM(1,n) + LCM(2,n) + … + LCM(n,n)$
+                then SUM = $\displaystyle \dfrac{n}{2}( \displaystyle\sum _{ d| n}\left( \phi \left( d\right) \times
+                d\right)
+                +1$
+                \end{enumerate}
+\paragraph{Legendre Symbol}\begin{enumerate}
+
+            
+            \item 
+                Let $\displaystyle p$ be an odd prime number. An integer $\displaystyle a$ is a quadratic residue
+                    modulo
+                    $\displaystyle p$ if it is congruent to a perfect square modulo $\displaystyle p$ and is a quadratic
+                    nonresidue modulo $\displaystyle p$ otherwise. The Legendre symbol is a function of $\displaystyle
+                    a$
+                    and
+                    $\displaystyle p$ defined as
+
+                \[\displaystyle \displaystyle \left( \frac{a}{p} \right)=
+                {\begin{cases}
+                \,1&{\text{if }}a\ {\text{is a quadatric residue modulo }}p\ {\text{and }}\ a\ \not\equiv\ 0
+                {\pmod{p}},\\\;\;\,-1&{\text{if }}a\ {\text{is a non-quadaratic residue modulo
+                }}p,\\\;\;\,0&{\text{if
+                }}a \equiv\ 0 {\pmod{p}}
+                \end{cases}}\]
+            
+            \item 
+                Legenres’s original definition was by means of explicit formula
+                    $\displaystyle \left(\frac{a}{p}\right)\equiv a^{\frac{p-1}{2}} \pmod{p} \ and \
+                    \left(\frac{a}{p}\right)\in{-1,0,1}.$
+
+            
+            \item 
+                The Legendre symbol is periodic in its first (or top) argument: if\ $\displaystyle a \equiv b
+                    \pmod{p}$,
+                    then
+                    $\displaystyle \displaystyle \left(\frac{a}{p}\right)=\left(\frac{b}{p}\right).$
+
+            
+            \item 
+                The Legendre symbol is a completely multiplicative function of its top argument:
+                    $\displaystyle \displaystyle \left(\frac{ab}{p} \right) = \left(\frac{a}{p} \right)
+                    \left(\frac{b}{p}
+                    \right)$
+
+            
+            \item 
+                The Fibonacci numbers $\displaystyle 1,1,2,3,5,8,13,21,34,55,…$ are defined by the recurrence
+                    $\displaystyle
+                    F_1 = F_2 = 1,F_{n+1} = F_n + F_{n-1}.$ If $\displaystyle p$ is a prime number then 
+                    $\displaystyle \displaystyle F_{p-\left(\frac{p}{5}\right)} \equiv 0 {\pmod{p}}, \;\;F_p \equiv
+                    \left(\frac{p}{5}\right) {\pmod{p}}.$
+
+                For example,
+                    $\displaystyle \displaystyle\left(\frac{2}{5}\right)=-1,\;\;\;F_3=2,\;\;\;F_2=1,$
+                    $\displaystyle \displaystyle\left(\frac{3}{5}\right)=-1,\;\;\; F_4=3,\;\;\;F_3=2,$
+
+                $\displaystyle \displaystyle\left(\frac{5}{5}\right)=\;\;\;0,\;\;\; F_5=5,$
+
+                $\displaystyle \displaystyle\left(\frac{7}{5}\right)=-1,\;\; F_8=21,\;\;F_7=13,$
+
+                $\displaystyle \displaystyle\left(\frac{11}{5}\right)=\;\;1,\;\; F_{10}=55,\;\;F_{11}=89,$
+
+            
+            \item Continuing from previous point, $\displaystyle \displaystyle \left(\frac{p}{5}\right)={\text{infinite
+                concatenation of the sequence}}\left(1,-1,-1,1,0\right) {\text{from }}p \geq 1$.
+            \item 
+                If $n$ = $\displaystyle \displaystyle k^2$ is perfect square then $\displaystyle
+                    \left(\frac{n}{p}\right)=1$
+                    for every odd prime except $\displaystyle \left(\frac{n}{k}\right)=0$ if k is an odd prime.
+
+            
+        \end{enumerate}
