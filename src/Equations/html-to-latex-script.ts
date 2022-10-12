@@ -19,7 +19,7 @@ const parseContents = (node: cheerio.AnyNode): string => {
             }
             if (child.tagName === 'h4') {
                 res += '\\end{enumerate}\n';
-                res += '\\paragraph{' + $(child).text() + '}';
+                res += '\\subsubsection{' + $(child).text() + '}';
                 res += '\\begin{enumerate}\n';
             } else if (child.tagName === 'ol' || child.tagName === 'ul') {
                 res += '\\begin{enumerate}\n';
@@ -59,10 +59,18 @@ $('#equations-list').children().each(
             content += '\\begin{enumerate}\n';
             content += parseContents(el);
             content += '\\end{enumerate}\n';
-        } else {
+        } else if (el.tagName === 'h3') {
             checkAndWriteFile();
             if (el.tagName === 'h3') {
                 filename = $(el).text();
+                // content = '\\makeatletter\n\\newcommand\\subsubsubsection' +
+                //     '{\\@startsection{paragraph}{4}{\\z@}\%\n' +
+                //     '{-2.5ex\\@plus -1ex \\@minus -.25ex}\%\n' +
+                //     '{1.25ex \\@plus .25ex}\%\n' +
+                //     '{\\normalfont\\normalsize\\bfseries}}\n' +
+                //     '\makeatother\n' +
+                //     '\\setcounter{secnumdepth}{3}\n' +
+                //     '\\setcounter{tocdepth}{4}\n';
             }
         }
     }
