@@ -1,75 +1,78 @@
-string add(const string& a, const string& b) {
-    string sum;
-    int i = a.length() - 1, j = b.length() - 1, carry = 0;
-    while (i >= 0 || j >= 0) {
-        int temp = carry;
-        if (i >= 0) {
-            temp += (int)(a[i--] - '0');
-        }
-        if (j >= 0) {
-            temp += (int)(b[j--] - '0');
-        }
-        carry = temp / 10;
-        sum += (char)((temp % 10) + '0');
-    }
-    if (carry > 0) {
-        sum += (char)(carry + '0');
-    }
-    for (int k = sum.length() - 1; k > 0 && sum[k] == '0'; k--) {
-        sum.pop_back();
-    }
-    reverse(sum.begin(), sum.end());
-    return sum;
-}
+namespace bigint {
+    constexpr int base = 10;
 
-string multiply(const string& a, const string& b) {
-    if (a.length() == 0 || b.length() == 0) {
-        return "0";
+    int digit_value(char c) {
+        if (c >= '0' && c <= '9') return (int)(c - '0');
+        if (c >= 'A' && c <= 'Z') return (int)(c - 'A' + 10);
+        if (c >= 'a' && c <= 'z') return (int)(c - 'a' + 36);
+        return -1;
     }
-    string prod = "0";
-    int shift = 0, carry = 0;
-    for (int j = b.length() - 1; j >= 0; j--) {
-        string prod_temp;
-        for (int i = 0; i < shift; i++) {
-            prod_temp += '0';
-        }
-        shift++;
-        carry = 0;
-        for (int i = a.length() - 1; i >= 0; i--) {
-            int temp = ((int)(a[i] - '0') * (int)(b[j] - '0')) + carry;
-            carry = temp / 10;
-            prod_temp += (char)((temp % 10) + '0');
-        }
-        if (carry > 0) {
-            prod_temp += (char)(carry + '0');
-        }
-        reverse(prod_temp.begin(), prod_temp.end());
-        prod = add(prod, prod_temp);
-    }
-    return prod;
-}
 
-struct division_t {
-    string quot;
-    int64_t rem;
-};
+    char digit_char(int n) {
+        if (n >= 0 && n <= 9) return (char)(n + '0');
+        if (n >= 10 && n <= 35) return (char)(n - 10 + 'A');
+        if (n >= 36 && n <= 61) return (char)(n - 36 + 'a');
+        return ' ';
+    }
 
-division_t divide(const string& num, int64_t divisor) {
-    string quot;
-    int idx = 0;
-    int64_t temp = num[idx++] - '0';
-    while (temp < divisor && idx < num.length()) {
-        temp = (temp * 10) + (int)(num[idx++] - '0');
+    string add(const string& a, const string& b) {
+        string sum;
+        int i = a.length() - 1, j = b.length() - 1, carry = 0;
+        while (i >= 0 || j >= 0) {
+            int temp = carry +
+                       (i < 0 ? 0 : digit_value(a[i--])) +
+                       (j < 0 ? 0 : digit_value(b[j--]));
+            carry = temp / base;
+            sum += digit_char(temp % base);
+        }
+        if (carry > 0) sum += digit_char(carry);
+        while (sum.length() > 1 && sum[sum.length() - 1] == '0') {
+            sum.pop_back();
+        }
+        reverse(sum.begin(), sum.end());
+        return sum;
     }
-    quot += (char)((temp / divisor) + '0');
-    while (idx < num.length()) {
-        temp = ((temp % divisor) * 10) + (int)(num[idx++] - '0');
-        quot += (char)((temp / divisor) + '0');
+
+    string multiply(const string& a, const string& b) {
+        string prod = "0";
+        int shift = 0, carry = 0;
+        for (int j = b.length() - 1; j >= 0; j--) {
+            string prod_temp(shift++, '0');
+            carry = 0;
+            for (int i = a.length() - 1; i >= 0; i--) {
+                int temp = carry + digit_value(a[i]) * digit_value(b[j]);
+                carry = temp / base;
+                prod_temp += digit_char(temp % base);
+            }
+            if (carry > 0) prod_temp += digit_char(carry);
+            reverse(prod_temp.begin(), prod_temp.end());
+            prod = add(prod, prod_temp);
+        }
+        while (prod.length() > 1 && prod[prod.length() - 1] == '0') {
+            prod.pop_back();
+        }
+        return prod;
     }
-    int cnt = 0;
-    while (cnt < quot.length() - 1 && quot[cnt] == '0') {
-        cnt++;
+
+    struct div_result {
+        string quot;
+        int64_t rem;
+    };
+
+    div_result divide(const string& num, int64_t divisor) {
+        div_result result;
+        int64_t remainder = 0;
+        for (int i = 0; i < num.length(); i++) {
+            remainder = (remainder * base) + digit_value(num[i]);
+            result.quot += digit_char(remainder / divisor);
+            remainder %= divisor;
+        }
+        int clz = 0;
+        while (clz < result.quot.length() - 1 && result.quot[clz] == '0') {
+            clz++;
+        }
+        result.quot = result.quot.substr(clz);
+        result.rem = remainder;
+        return result;
     }
-    quot = quot.substr(cnt);
-    return (division_t){quot, temp % divisor};
-}
+} // namespace bigint

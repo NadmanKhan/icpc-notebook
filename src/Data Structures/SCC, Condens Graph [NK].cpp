@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 vector<vector<int>> adj, adj_rev;
 vector<bool> used;
 vector<int> order, component;

@@ -1,7 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
 const int N = 3e4 + 5;
 const int blck = sqrt(N) + 1;
 

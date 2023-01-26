@@ -65,8 +65,7 @@ ll rho(ll n) {
 void factorize(ll n, vector<ll>& factors) {
     if (n == 1) {
         return;
-    }
-    else if (isprime(n)) {
+    } else if (isprime(n)) {
         factors.push_back(n);
         return;
     }
