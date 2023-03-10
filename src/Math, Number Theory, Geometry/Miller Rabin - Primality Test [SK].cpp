@@ -28,7 +28,7 @@ bool isPrime(ll n) {
         d >>= 1;
     }
 
-    // It's guranteed that these values will work for any number smaller than 3*10**18 (3 and 18 zeros)
+    // It's guranteed that these values will work for any number smaller than 3e18 (3 and 18 zeros)
     int a[9] = {2, 3, 5, 7, 11, 13, 17, 19, 23};
     for (int i = 0; i < 9; i++) {
         bool comp = fastPow(a[i], d, n) != 1;
