@@ -1,10 +1,3 @@
-int orientation(Point2D a, Point2D b, Point2D c) {
-    auto cross_mag =
-        ((b.y - a.y) * (c.x - b.x)) - ((b.x - a.x) * (c.y - b.y));
-    if (cross_mag == 0) return 0;    // colinear
-    return (cross_mag > 0) ? -1 : 1; // clock- or counterclock-wise
-}
-
 bool cw(Point2D a, Point2D b, Point2D c, bool include_collinear) {
     int o = orientation(a, b, c);
     return o < 0 || (include_collinear && o == 0);
