@@ -31,21 +31,6 @@ public:
         return phi[number / divisor];
     }
 
-    vector<pll> factorize(ll num) {
-        vector<pll> a;
-        for (int i = 0; i < (int)primes.size() && primes[i] * 1LL * primes[i] <= num; i++)
-            if (num % primes[i] == 0) {
-                int cnt = 0;
-                while (num % primes[i] == 0)
-                    cnt++, num /= primes[i];
-                a.push_back({primes[i], cnt});
-            }
-
-        if (num != 1)
-            a.push_back({num, 1});
-        return a;
-    }
-
     ll get_phi(int n) {
         return phi[n];
     }
