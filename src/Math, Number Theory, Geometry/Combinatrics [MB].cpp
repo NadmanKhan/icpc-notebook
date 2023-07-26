@@ -1,9 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
-typedef long long ll;
-
 struct Combinatrics {
     vector<ll> fact, fact_inv, inv;
     ll mod, nl;
@@ -82,7 +76,5 @@ struct Combinatrics {
         return (fact[n] * mod_inv(fact[n - r], p)) % p;
     }
 };
-
 const int N = 1e6, MOD = 998244353;
-
 Combinatrics comb(N, MOD);
