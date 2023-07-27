@@ -52,7 +52,6 @@ private:
 		{
 			//	**** //
 			segt[si] = lazy_to_seg(segt[si], val, ss, se);
-
 			if (ss != se)
 			{
 				lazy[left(si)] = lazy_to_lazy(lazy[left(si)], val);
@@ -60,12 +59,9 @@ private:
 			}
 			return;
 		}
-
 		int mid = midpoint(ss, se);
-
 		update(mid + 1, se, si * 2 + 1, qs, qe, val);
 		update(ss, mid, left(si), qs, qe, val);
-
 		segt[si] = op(segt[left(si)], segt[right(si)]);
 	}
 	void build(const std::vector<T> &a, int si, int ss, int se)
@@ -98,17 +94,14 @@ public:
 	T get(int qs, int qe) { return query(0, n - 1, 1, qs, qe); }
 	void set(int from, int to, F val) { update(0, n - 1, 1, from, to, val); }
 };
-
 int op(int a, int b)
 {
 	return a + b;
 }
-
 int lazy_to_seg(int seg, int lazy_v, int l, int r)
 {
 	return seg + (lazy_v * (r - l + 1));
 }
-
 int lazy_to_lazy(int curr_lazy, int input_lazy)
 {
 	return curr_lazy + input_lazy;

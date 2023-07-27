@@ -3,7 +3,6 @@ struct DSU {
     int n_components = 0;
     vector<int> component_size;
     vector<int> component_root;
-
     DSU(int n_nodes, bool make_all_nodes = false)
         : n_nodes(n_nodes),
           component_root(n_nodes, -1),
@@ -14,7 +13,6 @@ struct DSU {
             }
         }
     }
-
     void make_node(int v) {
         if (component_root[v] == -1) {
             component_root[v] = v;
@@ -22,7 +20,6 @@ struct DSU {
             ++n_components;
         }
     }
-
     int root(int v) {
         auto res = v;
         while (component_root[res] != res) {
@@ -35,7 +32,6 @@ struct DSU {
         }
         return res;
     }
-
     int connect(int u, int v) {
         u = root(u), v = root(v);
         if (u == v) return u;

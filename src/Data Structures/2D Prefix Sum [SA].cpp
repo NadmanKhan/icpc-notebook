@@ -1,6 +1,5 @@
 const int N = 1000, M = 500;
 int a[N + 1][M + 1], pref[N + 1][M + 1];
-
 // 1-based
 void build() {
     for (int i = 1; i <= N; ++i) {

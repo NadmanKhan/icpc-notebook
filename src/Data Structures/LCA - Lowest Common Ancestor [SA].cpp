@@ -2,7 +2,6 @@ vector<int> dist;
 vector<vector<int>> up;
 vector<vector<int>> adj;
 int lg = -1;
-
 void dfs(int u, int p = -1) {
     up[u][0] = p;
     for (auto v : adj[u]) {
@@ -11,7 +10,6 @@ void dfs(int u, int p = -1) {
         dfs(v, u);
     }
 }
-
 void pre_process(int root, int n) {
     assert(lg != -1);
     dist[root] = 0;
@@ -24,11 +22,9 @@ void pre_process(int root, int n) {
         }
     }
 }
-
 int get_lca(int u, int v) {
     if (dist[u] > dist[v])
         swap(u, v);
-
     int dif = dist[v] - dist[u];
     while (dif > 0) {
         int lg = __lg(dif);

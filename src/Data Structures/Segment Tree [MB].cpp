@@ -56,7 +56,6 @@ public:
 	T get(int qs, int qe) { return query(0, n - 1, qs, qe, 1); }
 	void set(int key, T val) { update(0, n - 1, key, 1, val); }
 };
-
 int op(int a, int b)
 {
 	return min(a, b);
