@@ -18,7 +18,8 @@ Options:
 
 Exampe:
 
-```plaintext
-codes2pdf ./ /tmp/team_reference.pdf
-codes2pdf ./src --author "NSU\_TravelingSolvesmen" --initials "NSU"
+```sh
+# codes2pdf is a Node.js module
+npx codes2pdf ./ /tmp/team_reference.pdf
+npx codes2pdf ./src --author "NSU\_TravelingSolvesmen" --initials "NSU"
 ```
