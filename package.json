@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "gen": "npx codes2pdf ./src --author \"NSU\\_TravelingSolvesmen\" --initials \"NSU\""
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12"
   },
