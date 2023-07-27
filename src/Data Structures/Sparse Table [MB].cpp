@@ -5,7 +5,6 @@ private:
     int n, lg;
     std::vector<int> logs;
     T e;
-
 public:
     SparseTable() : n(0) {}
 
@@ -23,11 +22,9 @@ public:
             logs[i] = logs[i / 2] + 1;
         }
     }
-
     SparseTable(const std::vector<T>& a) : SparseTable((int)a.size()) {
         init(a);
     }
-
     void init(const std::vector<T>& a) {
         this->n = (int)a.size();
 
@@ -41,13 +38,11 @@ public:
             }
         }
     }
-
     T get(int l, int r) {
         int j = logs[r - l + 1];
         return op(st[l][j], st[r - (1 << j) + 1][j]);
     }
 };
-
 int min(int a, int b) {
     return std::min(a, b);
 }

@@ -1,20 +1,17 @@
 namespace bigint {
     constexpr int base = 10;
-
     int digit_value(char c) {
         if (c >= '0' && c <= '9') return (int)(c - '0');
         if (c >= 'A' && c <= 'Z') return (int)(c - 'A' + 10);
         if (c >= 'a' && c <= 'z') return (int)(c - 'a' + 36);
         return -1;
     }
-
     char digit_char(int n) {
         if (n >= 0 && n <= 9) return (char)(n + '0');
         if (n >= 10 && n <= 35) return (char)(n - 10 + 'A');
         if (n >= 36 && n <= 61) return (char)(n - 36 + 'a');
         return ' ';
     }
-
     string add(const string& a, const string& b) {
         string sum;
         int i = a.length() - 1, j = b.length() - 1, carry = 0;
@@ -32,7 +29,6 @@ namespace bigint {
         reverse(sum.begin(), sum.end());
         return sum;
     }
-
     string multiply(const string& a, const string& b) {
         string prod = "0";
         int shift = 0, carry = 0;
@@ -53,12 +49,10 @@ namespace bigint {
         }
         return prod;
     }
-
     struct div_result {
         string quot;
         int64_t rem;
     };
-
     div_result divide(const string& num, int64_t divisor) {
         div_result result;
         int64_t remainder = 0;
