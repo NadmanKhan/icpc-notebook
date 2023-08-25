@@ -1,4 +1,4 @@
-# Competitive Programming Snippets - NSU Team-1
+# Code Repository and Notebook Generator for ICPC and Similar Contests
 
 To generate the notebook using [codes2pdf](https://github.com/Erfaniaa/codes2pdf), run:
 
